@@ -26,4 +26,15 @@ func (h *Handler) Handlersfunc(){
 	fmt.Println("")
 }
 
-func main(){}
+func NewHandler() HandlerInterface {
+	return &Handler{
+		Controller: controller.NewController(), //controller: bcoz pkg name is controller and rules
+		Rules:      rules.NewRules(),			 
+		// these newhandler, newrules, and newcontrollers are used to create a instance in different page
+	}
+}
+
+func main(){
+	handler := NewHandler()
+	handler.Handlersfunc()
+}

@@ -11,3 +11,7 @@ type Interface interface {
 func (c *Controller) Controllerfunc() {
 	fmt.Println("this is controller function")
 }
+
+func NewController() Interface {
+	return &Controller{}
+}

@@ -11,3 +11,7 @@ type Interface interface {
 func (r *Rules) Rulesfunc() {
 	fmt.Println("this is rules function")
 }
+
+func NewRules() Interface {
+	return &Rules{}
+}
